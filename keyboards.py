@@ -21,18 +21,38 @@ class KeyboardsAll:
         """
         dog_kb = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('Крупная', callback_data='Big')
-        btn2 = types.InlineKeyboardButton('Средняя', callback_data='Middle')
+        btn2 = types.InlineKeyboardButton('Средняя', callback_data='Average')
         btn3 = types.InlineKeyboardButton('Мелкая', callback_data='Small')
         dog_kb.add(btn1, btn2, btn3)
         return dog_kb
 
-    def dog_maintenance_kb(self):
+    def dog_big_maintenance_kb(self):
+        """
+        Клавиатура вида содержания собаки
+        """
+        keyboard = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton('Дворовое', callback_data='yard_big')
+        btn2 = types.InlineKeyboardButton('Квартирное', callback_data='apartment_big')
+        keyboard.add(btn1, btn2)
+        return keyboard
+
+    def dog_average_maintenance_kb(self):
+        """
+        Клавиатура вида содержания собаки
+        """
+        keyboard = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton('Дворовое', callback_data='yard_average')
+        btn2 = types.InlineKeyboardButton('Квартирное', callback_data='apartment_average')
+        keyboard.add(btn1, btn2)
+        return keyboard
+
+    def dog_small_maintenance_kb(self):
         """
         Клавиатура вида содержания собаки
         """
         maintenance = types.InlineKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Дворовое', callback_data='yard')
-        btn2 = types.InlineKeyboardButton('Квартирное', callback_data='apartment')
+        btn1 = types.InlineKeyboardButton('Дворовое', callback_data='yard_small')
+        btn2 = types.InlineKeyboardButton('Квартирное', callback_data='apartment_small')
         maintenance.add(btn1, btn2)
         return maintenance
 
@@ -40,8 +60,8 @@ class KeyboardsAll:
         """
         Клавиатура выбора цвета котов
         """
-        color_kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton('Одноцветные')
-        btn2 = types.KeyboardButton('Цветные')
-        color_kb.row(btn1, btn2)
+        color_kb = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton('Одноцветные', callback_data='Mono_color')
+        btn2 = types.InlineKeyboardButton('Цветные', callback_data='Multy_color')
+        color_kb.add(btn1, btn2)
         return color_kb
