@@ -20,9 +20,12 @@ class KeyboardsAll:
         Выбор размера собаки
         """
         dog_kb = types.InlineKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Крупная', callback_data='Big')
-        btn2 = types.InlineKeyboardButton('Средняя', callback_data='Average')
-        btn3 = types.InlineKeyboardButton('Мелкая', callback_data='Small')
+        btn1 = types.InlineKeyboardButton(
+            'Крупная', callback_data='Big')
+        btn2 = types.InlineKeyboardButton(
+            'Средняя', callback_data='Average')
+        btn3 = types.InlineKeyboardButton(
+            'Мелкая', callback_data='Small')
         dog_kb.add(btn1, btn2, btn3)
         return dog_kb
 
@@ -31,8 +34,10 @@ class KeyboardsAll:
         Клавиатура вида содержания собаки
         """
         keyboard = types.InlineKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Дворовое', callback_data='yard_big')
-        btn2 = types.InlineKeyboardButton('Квартирное', callback_data='apartment_big')
+        btn1 = types.InlineKeyboardButton(
+            'Дворовое', callback_data='yard_big')
+        btn2 = types.InlineKeyboardButton(
+            'Квартирное', callback_data='apartment_big')
         keyboard.add(btn1, btn2)
         return keyboard
 
@@ -41,8 +46,10 @@ class KeyboardsAll:
         Клавиатура вида содержания собаки
         """
         keyboard = types.InlineKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Дворовое', callback_data='yard_average')
-        btn2 = types.InlineKeyboardButton('Квартирное', callback_data='apartment_average')
+        btn1 = types.InlineKeyboardButton(
+            'Дворовое', callback_data='yard_average')
+        btn2 = types.InlineKeyboardButton(
+            'Квартирное', callback_data='apartment_average')
         keyboard.add(btn1, btn2)
         return keyboard
 
@@ -51,8 +58,10 @@ class KeyboardsAll:
         Клавиатура вида содержания собаки
         """
         maintenance = types.InlineKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Дворовое', callback_data='yard_small')
-        btn2 = types.InlineKeyboardButton('Квартирное', callback_data='apartment_small')
+        btn1 = types.InlineKeyboardButton(
+            'Дворовое', callback_data='yard_small')
+        btn2 = types.InlineKeyboardButton(
+            'Квартирное', callback_data='apartment_small')
         maintenance.add(btn1, btn2)
         return maintenance
 
@@ -61,7 +70,9 @@ class KeyboardsAll:
         Клавиатура выбора цвета котов
         """
         color_kb = types.InlineKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Одноцветные', callback_data='Mono_color')
-        btn2 = types.InlineKeyboardButton('Цветные', callback_data='Multy_color')
+        btn1 = types.InlineKeyboardButton(
+            'Породистые', callback_data='Purebred_cat')
+        btn2 = types.InlineKeyboardButton(
+            'Дворовые', callback_data='Ordinary_cat')
         color_kb.add(btn1, btn2)
         return color_kb
