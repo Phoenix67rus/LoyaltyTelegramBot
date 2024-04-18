@@ -29,7 +29,6 @@ class KeyboardsAll:
         dog_kb.add(btn1, btn2, btn3)
         return dog_kb
 
-
     def dog_maintenance_kb(self):
         """
         Клавиатура вида содержания собаки
@@ -42,15 +41,26 @@ class KeyboardsAll:
         keyboard.add(btn1, btn2)
         return keyboard
 
-
     def cats_kb(self):
         """
-        Клавиатура выбора цвета котов
+        Клавиатура выбора котов
         """
         color_kb = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton(
-            'Породистые', callback_data='Purebred_cat')
+            'Породистые', callback_data='Породистая')
         btn2 = types.InlineKeyboardButton(
-            'Дворовые', callback_data='Ordinary_cat')
+            'Дворовые', callback_data='Простая')
         color_kb.add(btn1, btn2)
         return color_kb
+
+    def actions_kb(self):
+        """
+        Клавиатура выбора действий
+        """
+        act_kb = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton(
+            'На главную', callback_data='На главную')
+        btn2 = types.InlineKeyboardButton(
+            'Выбрали? Свяжитесь с нами!', url='https://vk.com/vernosttv')
+        act_kb.add(btn1, btn2)
+        return act_kb
