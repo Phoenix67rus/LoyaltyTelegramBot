@@ -10,8 +10,8 @@ class KeyboardsAll:
         Выбор вида животного (стартовая клавиатура)
         """
         kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton('Собака')
-        btn2 = types.KeyboardButton('Кошка')
+        btn1 = types.KeyboardButton('🐕 Собака')
+        btn2 = types.KeyboardButton('🐈 Кошка')
         kb.row(btn1, btn2)
         return kb
 
